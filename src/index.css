@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+
+  html, body {
+    @apply h-full overflow-hidden;
+  }
+
+  body {
+    @apply bg-[#1A1F2C] text-foreground;
+  }
+
+  #root {
+    @apply h-full;
+  }
+}
+
+@layer components {
+  .department-scroll {
+    @apply flex space-x-2 overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-transparent;
+  }
+
+  .action-button {
+    @apply flex items-center space-x-2 w-full px-4 py-2 text-sm font-medium text-white 
+           bg-secondary rounded-md hover:bg-secondary/80 transition-colors duration-200;
+  }
+
+  .work-order-card {
+    @apply bg-[#1A1F2C] rounded-lg p-4 mb-4 border border-slate-700/50;
+  }
+
+  .work-order-scroll {
+    @apply h-[calc(100vh-12rem)] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-transparent pr-2;
+  }
+
+  .resource-scroll-area {
+    @apply h-[calc(100vh-12rem)] !important;
+  }
+}
